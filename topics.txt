@@ -1,0 +1,47 @@
+HarshTech Flask E-Market
+
+hello world in flask
+sending data to template <---> connecting html to python
+for loop in HTML
+template inheritance  [inherit common stuff from base.html file]
+    inherit navbar from base.html to related files
+    unique title for each page
+    create unique content after navbar for each unique page
+    added links to navbar hyperlinks using url_for
+models and database
+    store data into database
+    connect SQLite3 to Flask application
+model relationship
+    create User Model class
+    create relationship
+forms
+    accept user data using POST method
+    created HTML labels using python
+flask validations
+    create user validations
+        password length = min(6)
+        username length = (2, 30)
+        password1 is EqualTo password2
+    display/flash validation error messages on webpage
+    advanced validation
+        username must be unique
+        email must be unique
+user authentication
+    store passwords as hash instead of plain text
+user login
+    return to market page if logged in
+customize home page
+    create a button
+        return to Market Page, if user is logged in
+        return to Login Page, if user is not logged in
+log in users as soon as they are registered
+allowed transactions of items within specified limit
+purchase item
+    remove item from available-items in market; add to owned-items list
+    give ownership to user; set to 1
+    decrease budget
+sell item
+    remove item from owned-items list; add to available-items list
+    take back ownership from user; set to Null
+    increase budget
+

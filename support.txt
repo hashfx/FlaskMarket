@@ -1,0 +1,43 @@
+______________________________________
+______________________________________
+
+FLASK __INIT__ from Terminal
+
+set FLASK_APP = app_name.py
+set FLASK_DEBUG = 1
+flask run
+______________________________________
+
+DATABASE
+
+from app import db
+db.create_all()  # creates database
+
+from app import Item  # Item class from app.py
+
+item1=Item(name="IphoneX", price=80000, barcode='125478965875', description='Apple Product')
+
+item2=Item(name="Laptop", price=90000, barcode='542158748596', description='Hardware')
+
+db.session.add(item1)  # add item1 to database
+db.session.add(item2)  # add item2 to database
+db.session.commit()  # saves information to database
+
+Item.query.all()  # displays database collections
+
+# iterate database to get all columns from database
+for item in Item.query.all():
+...   item.name
+...   item.price
+...   item.id
+...   item.barcode
+
+os.system('cls')  # clear screen in python REPL
+
+Item.query.filter_by(price=80000)
+
+for item in Item.query.filter_by(price=80000):
+    item.name  # returns name of item whose price=80000
+
+
+
